@@ -191,3 +191,10 @@ nav {
     transform: translate(0);
   }
 }
+
+#LSQ  {
+   display: flex;
+  justify-content: center;
+  background-color: hwb(91 81% 2%);
+
+}
