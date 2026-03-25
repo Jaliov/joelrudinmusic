@@ -90,27 +90,36 @@ a:link {
   padding-left: 3%;
 }
 
-audio:hover {
+audio:hover, .audio:hover {
   transform: scale(1.1);
   filter: drop-shadow(2px 3px 3px #333);
   background-color: rgb(208, 240, 208);
 }
 
-audio::-webkit-media-controls-panel {
+audio::-webkit-media-controls-panel, .audio {
   background-color: hwb(91 81% 2%);
 }
 
-audio {
+audio, .audio {
   width: 12rem;
   box-shadow: 5px 10px rgb(134, 212, 244, 0.3);
   border-radius: 25px;
 }
+.audio {
+  height: 56px;
+}
+ 
 
 details {
   margin-left: 5%;
   margin-bottom: 1em;
   color: rgb(4, 4, 138);
+  /* background-color: rgba(169, 234, 167, 0.25); */
 }
+
+ #summary {
+   background-color: rgb(221, 244, 221, .5);
+ }
 
 nav,
 .nav-item,
@@ -152,15 +161,12 @@ nav {
 .horizAdjust {
   width: 50%;
   border: 3px solid rgb(18, 138, 243, 50%);
-}
-
-.horizAdjust {
   opacity: 1;
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
-.container:hover .horizAdjust {
+.container:hover .horizAdjust:hover {
   opacity: 0.6;
 }
 
@@ -192,9 +198,7 @@ nav {
   }
 }
 
-#LSQ  {
-   display: flex;
-  justify-content: center;
-  background-color: hwb(91 81% 2%);
-
+a.no_audio:hover {
+   pointer-events: none;
 }
+
